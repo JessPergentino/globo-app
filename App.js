@@ -8,6 +8,7 @@ import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 import Header from './Header';
 import Footer from './Footer';
+import NewsDetail from './NewDetail';
 import { navigationRef } from './RootNavigation';
 
 const Stack = createStackNavigator();
@@ -33,6 +34,13 @@ export default function App() {
             component={HomePage}
             options={{
               header: () => <Header headerDisplay="Globomantics" />
+            }}
+          />
+          <Stack.Screen
+            name="NewsDetail"
+            component={NewsDetail}
+            options={{
+              header: () => <Header headerDisplay="News" />
             }}
           />
         </Stack.Navigator>
