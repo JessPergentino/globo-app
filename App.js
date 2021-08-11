@@ -9,6 +9,7 @@ import AppLoading from 'expo-app-loading';
 import Header from './Header';
 import Footer from './Footer';
 import NewsDetail from './NewDetail';
+import AboutGlobo from './About';
 import { navigationRef } from './RootNavigation';
 
 const Stack = createStackNavigator();
@@ -41,6 +42,13 @@ export default function App() {
             component={NewsDetail}
             options={{
               header: () => <Header headerDisplay="News" />
+            }}
+          />
+          <Stack.Screen
+            name="About"
+            component={AboutGlobo}
+            options={{
+              header: () => <Header headerDisplay="About Globomantics" />
             }}
           />
         </Stack.Navigator>
